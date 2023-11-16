@@ -1,7 +1,7 @@
 import { FilterableField, IDField } from '@nestjs-query/query-graphql';
-import { ObjectType, ID } from '@nestjs/graphql';
+import { ObjectType, ID, Float } from '@nestjs/graphql';
 
-@ObjectType('ProductDTO')
+@ObjectType('Product')
 export class ProductDTO {
   @IDField(() => ID)
   id!: string;
@@ -9,7 +9,6 @@ export class ProductDTO {
   @FilterableField()
   name!: string;
 
-  @FilterableField()
+  @FilterableField(() => Float)
   price!: number;
 }
-

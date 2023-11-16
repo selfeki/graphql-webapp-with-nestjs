@@ -1,11 +1,12 @@
 import {
+    BaseEntity,
     Column,
     Entity,
     PrimaryGeneratedColumn,
   } from 'typeorm';
   
   @Entity()
-  export class ProductEntity {
+  export class ProductEntity extends BaseEntity {
     @PrimaryGeneratedColumn()
     id!: string;
   

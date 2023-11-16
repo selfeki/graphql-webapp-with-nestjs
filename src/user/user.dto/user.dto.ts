@@ -1,8 +1,20 @@
 import { FilterableField, IDField } from '@nestjs-query/query-graphql';
-import { ObjectType, ID } from '@nestjs/graphql';
-import { ProductDTO } from 'src/product/product.dto/product.dto';
+import { InputType, ObjectType, Field, ID, Int } from '@nestjs/graphql';
+import { ProductDTO, } from '../../product/product.dto/product.dto';
 
-@ObjectType('UserDTO')
+@InputType()
+export class CreateUserInput {
+  @FilterableField()
+  name!: string;
+
+  @Field()
+  email!: string;
+
+  @Field(() => Int)
+  age!: number;
+}
+
+@ObjectType('User')
 export class UserDTO {
   @IDField(() => ID)
   id!: string;
@@ -10,13 +22,13 @@ export class UserDTO {
   @FilterableField()
   name!: string;
 
-  @FilterableField()
-  email!: string;
+  @Field({ nullable: true }) // Can be null if user was created via UI
+  email?: string;
 
-  @FilterableField()
-  age!: number;
+  @Field(() => Int, { nullable: true })  // Can be null if user was created via UI
+  age?: number;
 
-  @FilterableField()
+  @Field(() => [ProductDTO])
   order!: ProductDTO[];
 }
 
