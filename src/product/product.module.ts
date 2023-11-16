@@ -8,7 +8,10 @@ import { ProductEntity } from './product.entity/product.entity';
   imports: [
     NestjsQueryGraphQLModule.forFeature({
       imports: [NestjsQueryTypeOrmModule.forFeature([ProductEntity])],
-      resolvers: [{ DTOClass: ProductDTO, EntityClass: ProductEntity }],
+      resolvers: [{ 
+        DTOClass: ProductDTO,
+        EntityClass: ProductEntity
+      }],
     }),
   ],
 })
