@@ -1,0 +1,32 @@
+div {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Blue color for the button */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+}
+
+#notification-container {
+    color: white;
+    background-color: #8d8c8c;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
