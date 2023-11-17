@@ -19,6 +19,9 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "dependencies": {
     "@apollo/server": "^4.9.5",
     "@nestjs-query/core": "^0.30.0",
@@ -39,7 +42,6 @@
     "pg": "^8.11.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
-    "sqlite3": "^5.1.6",
     "typeorm": "^0.3.17"
   },
   "devDependencies": {
@@ -61,6 +63,7 @@
     "pactum": "^3.5.1",
     "prettier": "^3.0.0",
     "source-map-support": "^0.5.21",
+    "sqlite3": "^5.1.6",
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.0",
     "ts-loader": "^9.4.3",

@@ -1,7 +1,7 @@
 ## Installation
 
 ```bash
-$ npm install
+$ npm install --legacy-peer-deps
 ```
 
 ## Running the app
@@ -36,6 +36,14 @@ All GraphQL requests should be sent to the following endpoint once the app is [r
 ```bash
 POST http://localhost:3000/graphql
 ```
+
+### UI
+http://localhost:3000
+
+
+### GraphQL Sandbox
+http://localhost:3000/graphql
+
 
 ## 1. Inserting Data Using GraphQL Mutations
 
